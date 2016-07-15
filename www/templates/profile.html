@@ -1,0 +1,45 @@
+<ion-view title="Profile" ng-init="init()">
+    <ion-content style="background: url(img/commuter.png) center; background-size: cover;>
+	<ion-scroll zooming="true" direction="y" style="width: 500px; height: 500px; margin-bottom:10px;">
+ <div class="list">
+ <div class="item item-avatar">
+ <img ng-src="{{profileData.picture.data.url}}">
+ <h2>{{profileData.name}}</h2>
+ <p>{{profileData.email}}</p>
+ </div>
+  <label class="item item-input item-stacked-label">
+    <span class="input-label">First Name</span>
+    <input type="text"  ng-model="fname"  >
+  </label>
+  <label class="item item-input item-stacked-label">
+    <span class="input-label">Last Name</span>
+    <input type="text" ng-model="lname">
+  </label>
+  <label class="item item-input item-stacked-label">
+    <span class="input-label">Email</span>
+    <input type="text" ng-model="email">
+  </label>
+   <label class="item item-input item-stacked-label">
+    <span class="input-label">Contact No</span>
+    <input type="text" ng-model="mobile">
+  </label>
+ 
+<label class="item item-input item-stacked-label">
+<span class="input-label">Home Address</span>
+<input type="text" ng-model="home">
+</label>
+<label class="item item-input item-stacked-label">
+<span class="input-label">Office Address</span>
+<input type="text" ng-model="office">
+</label>
+
+</div>
+</ion-scroll>
+
+
+</ion-content>
+<div  class="bar bar-footer bar-positive" ng-click="submit(fname,lname,email,mobile,home,office)">
+		<h3 class="title">Submit</h3>
+		</div>
+</ion-view>
+
